@@ -1,6 +1,12 @@
 
 html {
   height: 100%;
+  box-sizing: border-box;
+//  overflow-y: hidden; //временно
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
