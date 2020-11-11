@@ -551,25 +551,124 @@ a {
   background-size: cover; }
 
 .page-footer {
+  position: relative;
   min-width: 320px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
+  .page-footer::before {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 1px;
+    background-color: #626962;
+    opacity: 0.2; }
 
 .page-footer__wrapper {
+  position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 1491px; }
+  max-width: 1491px;
+  padding-top: 65px;
+  padding-left: 38px;
+  padding-right: 41px; }
 
 .page-footer__upper-layer {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.page-footer__website-sections {
+.page-footer__logo-and-social {
+  margin-right: 100px; }
+
+.page-footer__social {
+  margin-top: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.page-footer__social-link {
+  margin-right: 15px;
+  margin-bottom: 20px; }
+
+.page-footer__social-link svg {
+  fill: #cdcdcd; }
+
+.page-footer__social-link:hover svg,
+.page-footer__social-link:focus svg {
+  fill: #9a9a9a; }
+
+.page-footer__logo-and-social > p,
+.page-footer__bottom-layer p {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1b2d37;
+  opacity: 0.5; }
+
+.page-footer__bottom-layer p:first-child {
+  margin-right: 45px; }
+
+.page-footer__logo-and-social > p {
+  position: absolute;
+  bottom: 0;
+  left: 260px; }
+
+.page-footer__website-sections {
+  margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.page-footer__upper-layer h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1b2d37; }
+
+.page-footer__website-sections h2 {
+  width: 100%; }
+
+.page-footer__website-sections ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .page-footer__website-sections ul:first-of-type {
+    margin-right: 75px; }
+
+.page-footer__upper-layer a,
+.page-footer__contacts p {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #1b2d37;
+  opacity: 0.5; }
+
+.page-footer__contacts p {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.page-footer__upper-layer a:hover, .page-footer__upper-layer a:focus {
+  opacity: 0.8; }
 
 .page-footer__contacts {
   display: -webkit-box;
@@ -580,7 +679,76 @@ a {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.page-footer__toggle {
+  display: none; }
+
 .page-footer__bottom-layer {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+@media (max-width: 1350px) {
+  .page-footer__logo-and-social > p {
+    position: static;
+    margin-top: 18px; }
+  .page-footer__social {
+    margin-top: 20px; } }
+
+@media (max-width: 1023px) {
+  .page-footer::before {
+    bottom: 75px; }
+  .page-footer__wrapper {
+    padding-top: 19px;
+    padding-left: 25px;
+    padding-right: 25px; }
+  .page-footer__upper-layer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .page-footer__logo-and-social {
+    position: relative;
+    margin-right: 0;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%; }
+    .page-footer__logo-and-social::before {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: -25px;
+      right: -25px;
+      width: auto;
+      height: 1px;
+      background-color: #626962;
+      opacity: 0.2; }
+  .page-footer__logo-and-social > p {
+    position: static;
+    margin-top: 18px; }
+  .page-footer__social {
+    margin-top: 13px;
+    margin-left: 15px; }
+  .page-footer__social-link {
+    margin-right: 0;
+    margin-left: 15px; }
+  .page-footer__website-sections {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .page-footer__website-sections ul:first-of-type {
+    margin-right: 0; }
+  .page-footer__contacts {
+    margin-right: 10px; }
+  .page-footer__bottom-layer {
+    margin-top: 44px;
+    margin-bottom: 15px; }
+  .page-footer__bottom-layer p:first-child {
+    display: none; } }
