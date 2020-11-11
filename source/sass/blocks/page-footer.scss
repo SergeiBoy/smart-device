@@ -1,0 +1,29 @@
+
+.page-footer {
+  min-width: $min-width;
+  flex: 0 0 auto;
+}
+
+.page-footer__wrapper {
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: $max-width;
+}
+
+.page-footer__upper-layer {
+  display: flex;
+}
+
+.page-footer__website-sections {
+  display: flex;
+}
+
+.page-footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__bottom-layer {
+  display: flex;
+}
