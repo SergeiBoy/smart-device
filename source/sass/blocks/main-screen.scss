@@ -2,6 +2,248 @@
 .main-screen {
   min-height: 878px;
 
-  background: #1b2d37 url("../img/background-main-screen.png") no-repeat center center;
-  background-size: cover;
+  background-color: #1b2d37;
+  background-image: url("../img/circles.png"), url("../img/background-main-screen.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 50%, 50% 50%;
+  background-size: cover, cover;
+}
+
+.main-screen__wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1646px;
+  min-height: 878px;
+  padding-bottom: 20px;
+  padding-left: 110px;
+  padding-right: 40px;
+
+  overflow: hidden;
+}
+
+.main-screen__heading-group {
+  margin-top: 260px;
+  margin-right: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 520px;
+}
+
+.main-screen__heading-group h1 {
+  margin-bottom: 5px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.main-screen__heading-group p {
+  position: relative;
+
+  padding-left: 100px;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: #ffffff;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 5px;
+
+    width: 66px;
+    height: 2px;
+
+    background-color: #ffffff;
+  }
+}
+
+.main-screen__advice-link {
+  margin-left: 100px;
+  margin-top: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 407px;
+  min-height: 55px;
+  padding: 10px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #00b2ff;
+  border-radius: 5px;
+}
+
+.main-screen__down-link {
+  position: absolute;
+  bottom: 125px;
+  left: 78px;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.5;
+
+  transform: rotate(-90deg);
+}
+
+.main-screen__image-wrapper {
+  margin-top: 258px;
+
+  flex-shrink: 0;
+}
+
+.main-screen__span-for-mobile {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .main-screen {
+    min-height: 686px;
+
+    background-position: left 49% bottom 130px, 50% 50%;
+    background-size: 1470px auto, cover;
+  }
+
+  .main-screen__wrapper {
+    padding-left: 90px;
+
+    min-height: 686px;
+  }
+
+  .main-screen__heading-group {
+    margin-top: 147px;
+    margin-right: 20px;
+
+    min-width: 400px;
+  }
+
+  .main-screen__heading-group h1 {
+    margin-bottom: 13px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .main-screen__heading-group p {
+    padding-left: 50px;
+
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      top: 15px;
+      left: 2px;
+
+      width: 33px;
+    }
+  }
+
+  .main-screen__advice-link {
+    margin-left: 50px;
+    margin-top: 35px;
+
+    min-width: 379px;
+  }
+
+  .main-screen__down-link {
+    display: none;
+  }
+
+  .main-screen__image-wrapper {
+    margin-top: 115px;
+  }
+
+  .main-screen__image-wrapper img {
+    width: 465px;
+    height: 340px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-screen {
+    min-height: 646px;
+
+    background-position: left 55% bottom 110px, 50% 50%;
+  }
+
+  .main-screen__wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 646px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-screen__heading-group {
+    margin-top: -30px;
+    order: 1;
+
+    min-width: auto;
+  }
+
+  .main-screen__heading-group h1 {
+    margin-top: 0;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .main-screen__heading-group p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .main-screen__advice-link {
+    margin-left: 2px;
+    margin-top: 23px;
+
+    min-width: 287px;
+  }
+
+  .main-screen__image-wrapper {
+    align-self: flex-end;
+    margin-right: -20px;
+
+    margin-top: 92px;
+    margin-left: 10px;
+
+    width: 301px;
+  }
+
+  .main-screen__image-wrapper img {
+    width: 301px;
+    height: 220px;
+  }
+
+  .main-screen__span-for-desktop {
+    display: none;
+  }
+
+  .main-screen__span-for-mobile {
+    display: inline;
+  }
 }
