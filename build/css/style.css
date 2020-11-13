@@ -362,6 +362,7 @@ a {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -748,8 +749,7 @@ a {
     display: inline; } }
 
 .advantages {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 .advantages__list {
   margin: 0;
@@ -833,6 +833,147 @@ a {
   position: absolute;
   left: 0;
   bottom: -550px; }
+
+.advantages__decorative-triangle-5 {
+  display: none; }
+
+@media (max-width: 1023px) {
+  .advantages__list {
+    margin-top: 55px;
+    padding-left: 25px;
+    padding-right: 25px; }
+  .advantages__item {
+    margin-bottom: 4.17%;
+    width: 47.92%;
+    min-width: 290px;
+    min-height: 306px;
+    padding: 23px 25px 10px 25px;
+    border-left-width: 2px; }
+    .advantages__item--less-hight {
+      min-height: 232px; }
+  .advantages__icon-wrapper--svg-icon-hired svg {
+    width: 32px;
+    height: 32px; }
+  .advantages__icon-wrapper--svg-icon-detective svg {
+    width: 31px;
+    height: 26px; }
+  .advantages__icon-wrapper--svg-icon-tag svg {
+    width: 32px;
+    height: 32px; }
+  .advantages__item h3 {
+    margin-top: 2px;
+    margin-bottom: 0;
+    margin-right: -15px; }
+  .advantages__item p {
+    margin-top: 8px;
+    margin-bottom: 5px; }
+  .advantages__decorative-triangle-1,
+  .advantages__decorative-triangle-2,
+  .advantages__decorative-triangle-3,
+  .advantages__decorative-triangle-4 {
+    display: none; }
+  .advantages__decorative-triangle-5 {
+    position: absolute;
+    right: 0;
+    bottom: -310px;
+    display: block; } }
+
+@media (max-width: 767px) {
+  .advantages__list {
+    margin-top: 38px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .advantages__item {
+    margin-bottom: 20px;
+    min-height: 310px;
+    padding-bottom: 20px; }
+    .advantages__item--less-hight {
+      min-height: 232px; }
+    .advantages__item--less-padding {
+      padding-right: 10px; }
+  .advantages__item h3 {
+    margin-top: 7px;
+    font-size: 20px;
+    line-height: 28px; } }
+
+.company-description {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 45px;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  max-width: 1270px;
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.company-description img {
+  margin-left: -10px;
+  margin-top: 35px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.company-description__describing {
+  margin-left: 55px; }
+
+.company-description__describing h2 {
+  margin-bottom: 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #666666; }
+
+.company-description__describing p {
+  margin-bottom: 20px;
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666; }
+
+.company-description__describing a {
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 180px;
+  min-height: 45px;
+  padding: 14px 10px 14px 10px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00b2ff;
+  border: solid 1px #00b2ff;
+  border-radius: 5px; }
+
+@media (max-width: 1023px) {
+  .company-description {
+    margin-top: 0;
+    padding-left: 25px;
+    padding-right: 25px; }
+  .company-description__describing h2 {
+    font-size: 32px;
+    line-height: 45px; }
+  .company-description img {
+    margin-top: 25px;
+    width: 154px;
+    height: 362px; } }
 
 .page-footer {
   position: relative;
