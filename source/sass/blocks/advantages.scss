@@ -1,0 +1,105 @@
+
+.advantages {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.advantages__list {
+  @include reset-list;
+
+  margin: 0 auto;
+  margin-top: 110px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1270px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.advantages__item {
+  margin-bottom: 2.56%;
+  z-index: 5;
+
+  width: 48.72%;
+  min-height: 299px;
+  padding: 40px 40px 20px 40px;
+
+  border: solid 1px #ebebeb;
+  border-left: solid 3px #00b2ff;
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00b2ff;
+  }
+}
+
+.advantages__icon-wrapper {
+  min-height: 40px;
+}
+
+.advantages__item svg {
+  fill: #00b2ff;
+}
+
+.advantages__item:hover svg {
+  fill: #ffffff;
+}
+
+.advantages__item h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+}
+
+.advantages__item p {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+}
+
+.advantages__item:hover h3,
+.advantages__item:hover p {
+  color: #ffffff;
+}
+
+.advantages__decorative-triangle-1 {
+  position: absolute;
+  top: -65px;
+  left: 200px;
+}
+
+.advantages__decorative-triangle-2 {
+  position: absolute;
+  bottom: -255px;
+  right: 48%;
+  transform: translateX(50%);
+}
+
+.advantages__decorative-triangle-3 {
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+}
+
+.advantages__decorative-triangle-4 {
+  position: absolute;
+  left: 0;
+  bottom: -550px;
+}
+
+@media (max-width: $tablet-width) {
+
+}
