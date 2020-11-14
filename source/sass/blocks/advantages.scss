@@ -98,10 +98,6 @@
   bottom: -550px;
 }
 
-.advantages__decorative-triangle-5 {
-  display: none;
-}
-
 @media (max-width: $tablet-width) {
   .advantages__list {
     margin-top: 55px;
@@ -152,18 +148,14 @@
   }
 
   .advantages__decorative-triangle-1,
-  .advantages__decorative-triangle-2,
   .advantages__decorative-triangle-3,
   .advantages__decorative-triangle-4 {
     display: none;
   }
 
-  .advantages__decorative-triangle-5 {
-    position: absolute;
-    right: 0;
-    bottom: -310px;
-
-    display: block;
+  .advantages__decorative-triangle-2 {
+    bottom: -312px;
+    right: 16%;
   }
 }
 
@@ -197,5 +189,9 @@
 
     font-size: 20px;
     line-height: 28px;
+  }
+
+  .advantages__decorative-triangle-2 {
+    right: 1%;
   }
 }

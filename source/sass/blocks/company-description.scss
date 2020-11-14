@@ -45,13 +45,13 @@
 }
 
 .company-description__describing a {
-  margin-top: 20px;
+  margin-top: 22px;
 
   display: inline-block;
   vertical-align: middle;
   min-width: 180px;
   min-height: 45px;
-  padding: 14px 10px 14px 10px;
+  padding: 13px 10px 13px 10px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -74,15 +74,63 @@
     padding-right: 25px;
   }
 
-  .company-description__describing h2 {
-    font-size: 32px;
-    line-height: 45px;
-  }
-
   .company-description img {
     margin-top: 25px;
 
     width: 154px;
     height: 362px;
+  }
+
+  .company-description__describing {
+    margin-left: 45px;
+  }
+
+  .company-description__describing h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .company-description__describing p + p {
+    width: 100%;
+    max-height: 90px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .company-description {
+    margin-top: 15px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .company-description__describing {
+    margin-left: 0;
+  }
+
+  .company-description__describing h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .company-description__describing p + p {
+    margin-top: 40px;
+
+    max-height: 180px;
+    -webkit-line-clamp: 8;
+  }
+
+  .company-description img {
+    display: none;
+  }
+
+  .company-description__describing a {
+    margin-top: 10px;
   }
 }
