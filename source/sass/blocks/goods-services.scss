@@ -1,0 +1,189 @@
+
+.goods-services {
+  margin-top: 96px;
+
+  padding-top: 56px;
+  padding-bottom: 97px;
+
+  background-color: #1b2d37;
+}
+
+.goods-services__wrapper {
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.goods-services h2 {
+  margin-left: 17px;
+  margin-bottom: 53px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff;
+}
+
+.goods-services__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-services__item {
+  margin-right: 1.25%;
+  margin-left: 1.25%;
+  margin-bottom: 2.5%;
+
+  width: 30.83%;
+}
+
+.goods-services__item-link {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 620px;
+
+  overflow: hidden;
+}
+
+.goods-services__item-link:hover .goods-services__upper-blackout,
+.goods-services__item-link:focus .goods-services__upper-blackout {
+  opacity: 0.4;
+}
+
+.goods-services__list h3 {
+  position: absolute;
+  top: 30px;
+  left: 44px;
+  z-index: 5;
+
+  max-width: 170px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.goods-services__list img {
+  display: block;
+  max-width: none;
+}
+
+.goods-services__down-right-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+
+  background-color: #00b2ff;
+}
+
+.goods-services__upper-blackout {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #1b2d37;
+  opacity: 0.65;
+}
+
+@media (max-width: $tablet-width) {
+  .goods-services {
+    margin-top: 73px;
+
+    padding-top: 23px;
+    padding-bottom: 31px;
+  }
+
+  .goods-services__wrapper {
+    padding-left: 26px;
+    padding-right: 29px;
+  }
+
+  .goods-services h2 {
+    margin-left: 0;
+    margin-bottom: 50px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .goods-services__list {
+    flex-direction: column;
+  }
+
+  .goods-services__item {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 46px;
+
+    width: 100%;
+  }
+
+  .goods-services__item-link {
+    height: 256px;
+  }
+
+  .goods-services__list h3 {
+    top: 20px;
+  }
+
+  .goods-services__list picture {
+    width: 100%;
+  }
+
+  .goods-services__list img {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .goods-services {
+    margin-top: 65px;
+
+    padding-top: 27px;
+    padding-bottom: 35px;
+  }
+
+  .goods-services__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .goods-services h2 {
+    margin-left: 10px;
+    margin-bottom: 40px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .goods-services__item {
+    margin-bottom: 30px;
+  }
+
+  .goods-services__list h3 {
+    top: 0;
+    left: 36px;
+  }
+}
