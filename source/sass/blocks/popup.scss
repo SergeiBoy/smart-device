@@ -1,0 +1,28 @@
+
+.popup {
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    position: fixed;
+    z-index: 20;
+    top: 135px;
+    right: 50%;
+    transform: translateX(50%);
+
+    display: flex;
+    width: 100%;
+    max-width: 490px;
+    min-width: $min-width;
+    padding: 10px 40px 35px 40px;
+
+    background-color: #00b2ff;
+  }
+}
+
+.popup__close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

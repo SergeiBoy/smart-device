@@ -1206,13 +1206,19 @@ a {
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 570px; }
+  display: flex; }
+  .form--bottom {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 570px; }
+  .form--popup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 .form h2 {
   margin-bottom: 0;
@@ -1221,6 +1227,10 @@ a {
   font-size: 36px;
   line-height: 51px;
   color: #ffffff; }
+
+.form--popup h2 {
+  font-size: 28px;
+  line-height: 39px; }
 
 .form p {
   margin-top: 10px;
@@ -1231,11 +1241,18 @@ a {
   line-height: 22px;
   color: #ffffff; }
 
+.form--popup p {
+  margin-bottom: 30px; }
+
 .form__input {
   margin-bottom: 40px;
   width: 47.36%; }
   .form__input--user-name {
     margin-right: 5.28%; }
+
+.form--popup .form__input {
+  margin-bottom: 33px;
+  width: 100%; }
 
 .form__input input {
   width: 100%;
@@ -1275,6 +1292,9 @@ a {
     font-size: 16px;
     line-height: normal;
     color: #ffffff; }
+
+.form__input--popup input {
+  padding-left: 25px; }
 
 .form textarea {
   margin-bottom: 44px;
@@ -1317,6 +1337,11 @@ a {
     line-height: normal;
     color: #ffffff; }
 
+.form--popup textarea {
+  margin-bottom: 30px;
+  height: 104px;
+  padding-left: 25px; }
+
 .form button {
   margin-right: 37px;
   margin-bottom: 40px;
@@ -1338,10 +1363,17 @@ a {
   .form button:hover, .form button:focus {
     color: #d9d9d9; }
 
+.form--popup button {
+  margin-bottom: 30px;
+  width: 100%; }
+
 .form__checkbox {
   position: relative;
   margin-top: 5px;
   padding-left: 33px; }
+
+.form--popup .form__checkbox {
+  padding-left: 50px; }
 
 .form__checkbox input {
   position: absolute;
@@ -1390,43 +1422,67 @@ a {
   opacity: 1; }
 
 @media (max-width: 1023px) {
-  .form {
+  .form--bottom {
     width: 591px; }
-  .form h2 {
+  .form--bottom h2 {
     font-size: 32px;
     line-height: 45px; }
-  .form p {
+  .form--bottom p {
     margin-top: 16px;
     margin-bottom: 53px; }
-  .form__input {
+  .form--bottom .form__input {
     margin-bottom: 44px; }
-  .form textarea {
+  .form--bottom textarea {
     height: 160px; }
-  .form button {
+  .form--bottom button {
     margin-right: 40px; }
-  .form__checkbox {
+  .form--bottom .form__checkbox {
     margin-top: 8px; } }
 
 @media (max-width: 767px) {
-  .form {
+  .form--bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .form h2 {
+  .form--bottom h2 {
     font-size: 28px;
     line-height: 39px; }
-  .form p {
+  .form--bottom p {
     margin-bottom: 25px; }
-  .form__input {
+  .form--bottom .form__input {
     margin-bottom: 30px;
     width: 100%; }
-  .form textarea {
+  .form--bottom textarea {
     margin-bottom: 33px;
     height: 104px; }
-  .form button {
+  .form--bottom button {
     margin-bottom: 20px;
     width: 100%; } }
+
+.popup--closed {
+  display: none; }
+
+.popup--opened {
+  position: fixed;
+  z-index: 20;
+  top: 135px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 490px;
+  min-width: 320px;
+  padding: 10px 40px 35px 40px;
+  background-color: #00b2ff; }
+
+.popup__close-button {
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 .page-footer {
   position: relative;

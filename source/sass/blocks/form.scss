@@ -1,9 +1,16 @@
 
 .form {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  width: 570px;
+
+  &--bottom {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 570px;
+  }
+
+  &--popup {
+    flex-direction: column;
+  }
 }
 
 .form h2 {
@@ -14,6 +21,11 @@
   font-size: 36px;
   line-height: 51px;
   color: #ffffff;
+}
+
+.form--popup h2 {
+  font-size: 28px;
+  line-height: 39px;
 }
 
 .form p {
@@ -27,6 +39,10 @@
   color: #ffffff;
 }
 
+.form--popup p {
+  margin-bottom: 30px;
+}
+
 .form__input {
   margin-bottom: 40px;
 
@@ -35,6 +51,12 @@
   &--user-name {
     margin-right: 5.28%;
   }
+}
+
+.form--popup .form__input {
+  margin-bottom: 33px;
+
+  width: 100%;
 }
 
 .form__input input {
@@ -57,6 +79,10 @@
     line-height: normal;
     color: #ffffff;
   }
+}
+
+.form__input--popup input {
+  padding-left: 25px;
 }
 
 .form textarea {
@@ -82,6 +108,14 @@
     line-height: normal;
     color: #ffffff;
   }
+}
+
+.form--popup textarea {
+  margin-bottom: 30px;
+
+  height: 104px;
+
+  padding-left: 25px;
 }
 
 .form button {
@@ -112,11 +146,21 @@
   }
 }
 
+.form--popup button {
+  margin-bottom: 30px;
+
+  width: 100%;
+}
+
 .form__checkbox {
   position: relative;
   margin-top: 5px;
 
   padding-left: 33px;
+}
+
+.form--popup .form__checkbox {
+  padding-left: 50px;
 }
 
 .form__checkbox input {
@@ -171,64 +215,64 @@
 }
 
 @media (max-width: $tablet-width) {
-  .form {
+  .form--bottom {
     width: 591px;
   }
 
-  .form h2 {
+  .form--bottom h2 {
     font-size: 32px;
     line-height: 45px;
   }
 
-  .form p {
+  .form--bottom p {
     margin-top: 16px;
     margin-bottom: 53px;
   }
 
-  .form__input {
+  .form--bottom .form__input {
     margin-bottom: 44px;
   }
 
-  .form textarea {
+  .form--bottom textarea {
     height: 160px;
   }
 
-  .form button {
+  .form--bottom button {
     margin-right: 40px;
   }
 
-  .form__checkbox {
+  .form--bottom .form__checkbox {
     margin-top: 8px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .form {
+  .form--bottom {
     flex-direction: column;
   }
 
-  .form h2 {
+  .form--bottom h2 {
     font-size: 28px;
     line-height: 39px;
   }
 
-  .form p {
+  .form--bottom p {
     margin-bottom: 25px;
   }
 
-  .form__input {
+  .form--bottom .form__input {
     margin-bottom: 30px;
 
     width: 100%;
   }
 
-  .form textarea {
+  .form--bottom textarea {
     margin-bottom: 33px;
 
     height: 104px;
   }
 
-  .form button {
+  .form--bottom button {
     margin-bottom: 20px;
 
     width: 100%;
