@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Smart Device</title>
+    <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -39,11 +43,11 @@
           <div class="main-screen__heading-group">
             <h1>Печатные платы</h1>
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="main-screen__advice-link" href="#">
+            <a class="main-screen__advice-link" href="#feedback-form">
               <span class="main-screen__span-for-desktop">Получить бесплатную консультацию</span>
               <span class="main-screen__span-for-mobile">Бесплатная консультация</span>
             </a>
-            <a class="main-screen__down-link" href="#">Скролл вниз</a>
+            <a class="main-screen__down-link" href="#advantages">Скролл вниз</a>
           </div>
           <div class="main-screen__image-wrapper">
             <picture>
@@ -55,7 +59,7 @@
         </div>
       </section>
 
-      <section class="page-main__advantages advantages">
+      <section class="page-main__advantages advantages" id="advantages">
         <h2 class="visually-hidden">Преимущества компании</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -158,16 +162,20 @@
         </div>
       </section>
 
-      <section class="page-main__feedback-form feedback-form">
+      <section class="page-main__feedback-form feedback-form" id="feedback-form">
         <div class="feedback-form__wrapper">
           <img src="img/airplane.png" width="511" height="288" alt="Самолёт">
           <form class="feedback-form__form form" action="#" method="post">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <label class="visually-hidden" for="user-name">Имя</label>
-            <input id="user-name" type="text" placeholder="Имя" required="">
-            <label class="visually-hidden" for="user-tel">Телефон</label>
-            <input id="user-tel" type="tel" placeholder="Телефон" pattern="[+]{0,1}\d\s?[\(]{0,1}\d{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
+            <div class="form__input form__input--user-name">
+              <label class="visually-hidden" for="user-name">Имя</label>
+              <input id="user-name" type="text" placeholder="Имя" required="">
+            </div>
+            <div class="form__input form__input--tel">
+              <label class="visually-hidden" for="user-tel">Телефон</label>
+              <input id="user-tel" type="tel" placeholder="Телефон" pattern="[+]{0,1}\d\s?[\(]{0,1}\d{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
+            </div>
             <label class="visually-hidden" for="question">Ваш вопрос</label>
             <textarea id="question" placeholder="Ваш вопрос" required=""></textarea>
             <button type="submit">Задать вопрос</button>

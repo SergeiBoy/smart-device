@@ -978,9 +978,9 @@ a {
     max-height: 90px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
+    /*display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4; } }
+    -webkit-line-clamp: 4;*/ } }
 
 @media (max-width: 767px) {
   .company-description {
@@ -1231,40 +1231,45 @@ a {
   line-height: 22px;
   color: #ffffff; }
 
-.form input {
+.form__input {
   margin-bottom: 40px;
-  width: 47.36%;
+  width: 47.36%; }
+  .form__input--user-name {
+    margin-right: 5.28%; }
+
+.form__input input {
+  width: 100%;
   height: 50px;
   padding: 14px 16px;
   background-color: #33c1ff;
   border: 0; }
-  .form input:first-of-type {
-    margin-right: 5.28%; }
-  .form input::-webkit-input-placeholder {
+  .form__input input:hover, .form__input input:focus {
+    background-color: #66d1ff; }
+  .form__input input::-webkit-input-placeholder {
     font-family: "PT Mono", "Courier New", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: normal;
     color: #ffffff; }
-  .form input::-moz-placeholder {
+  .form__input input::-moz-placeholder {
     font-family: "PT Mono", "Courier New", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: normal;
     color: #ffffff; }
-  .form input:-ms-input-placeholder {
+  .form__input input:-ms-input-placeholder {
     font-family: "PT Mono", "Courier New", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: normal;
     color: #ffffff; }
-  .form input::-ms-input-placeholder {
+  .form__input input::-ms-input-placeholder {
     font-family: "PT Mono", "Courier New", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: normal;
     color: #ffffff; }
-  .form input::placeholder {
+  .form__input input::placeholder {
     font-family: "PT Mono", "Courier New", monospace;
     font-weight: 400;
     font-size: 16px;
@@ -1279,6 +1284,8 @@ a {
   background-color: #33c1ff;
   border: 0;
   resize: none; }
+  .form textarea:hover, .form textarea:focus {
+    background-color: #66d1ff; }
   .form textarea::-webkit-input-placeholder {
     font-family: "PT Mono", "Courier New", monospace;
     font-weight: 400;
@@ -1391,7 +1398,7 @@ a {
   .form p {
     margin-top: 16px;
     margin-bottom: 53px; }
-  .form input {
+  .form__input {
     margin-bottom: 44px; }
   .form textarea {
     height: 160px; }
@@ -1406,15 +1413,14 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .form input {
-    width: 100%; }
   .form h2 {
     font-size: 28px;
     line-height: 39px; }
   .form p {
     margin-bottom: 25px; }
-  .form input {
-    margin-bottom: 30px; }
+  .form__input {
+    margin-bottom: 30px;
+    width: 100%; }
   .form textarea {
     margin-bottom: 33px;
     height: 104px; }
