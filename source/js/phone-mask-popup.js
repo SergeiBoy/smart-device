@@ -5,7 +5,7 @@
 (function () {
   try {
     IMask(
-        document.querySelector('.form__input--tel-bottom-js-mask input'), {
+        document.querySelector('.form__input--tel-popup-js-mask input'), {
           mask: '{+7(}000)000-00-00'
         })();
   } catch (e) {

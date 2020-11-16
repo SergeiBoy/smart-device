@@ -1,8 +1,6 @@
 
 .popup {
-  &--closed {
-    display: none;
-  }
+  display: none;
 
   &--opened {
     position: fixed;
@@ -23,6 +21,36 @@
 
 .popup__close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 18px;
+  right: 18px;
+
+  width: 23px;
+  height: 23px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: 0;
+
+    width: 23px;
+    height: 1px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
