@@ -317,8 +317,7 @@ template {
 html {
   height: 100%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-y: scroll; }
+          box-sizing: border-box; }
 
 *,
 *::before,
@@ -982,7 +981,7 @@ a {
     max-height: 90px;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*    display: -webkit-box;
+    /*display: -webkit-box;
     -webkit-box-orient: vertical;*/
     -webkit-line-clamp: 4; } }
 
