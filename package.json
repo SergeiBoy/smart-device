@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "del": "^4.1.1",
-    "imask": "^6.0.5"
+    "imask": "^6.0.5",
+    "jquery": "^3.5.1"
   }
 }

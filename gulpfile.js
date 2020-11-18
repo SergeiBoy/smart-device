@@ -18,13 +18,13 @@ var del = require("del");
 var concat = require("gulp-concat");
 
 gulp.task("main-scripts", function() {
-  return gulp.src(["source/js/accordion.js", "source/js/phone-mask.js", "source/js/phone-mask-popup.js", "source/js/popup.js"])
+  return gulp.src(["source/js/accordion.js", "source/js/phone-mask.js", "source/js/phone-mask-popup.js", "source/js/popup.js", "source/js/smooth-scrolling.js"])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("vendor-scripts", function() {
-  return gulp.src(["source/js/svg4everybody.js", "node_modules/imask/dist/imask.js"])
+  return gulp.src(["source/js/svg4everybody.js", "node_modules/imask/dist/imask.js", "node_modules/jquery/dist/jquery.min.js"])
     .pipe(concat("vendor.js"))
     .pipe(gulp.dest("build/js"));
 });

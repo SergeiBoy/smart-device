@@ -5,6 +5,7 @@
   var closeButton = document.querySelector('.modal-inquiry-form__close-button');
 
   var modalInquiryForm = document.querySelector('.modal-inquiry-form');
+  var body = document.querySelector('body');
 
   var name = modalInquiryForm.querySelector('.form__input--user-name input');
   var tel = modalInquiryForm.querySelector('.form__input--tel input');
@@ -50,6 +51,7 @@
   var closePopup = function () {
     writeInLocalStorage();
     modalInquiryForm.classList.remove('modal-inquiry-form--opened');
+    body.classList.remove('fixed');
     closeButton.removeEventListener('click', onCloseButtonClick);
     document.removeEventListener('keydown', onPopupEscPress);
     document.removeEventListener('click', onAroundPopupClick);
@@ -59,6 +61,7 @@
   openButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     evt.stopPropagation();
+    body.classList.add('fixed');
     modalInquiryForm.classList.add('modal-inquiry-form--opened');
 
     try {

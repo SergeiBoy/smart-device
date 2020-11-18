@@ -1,15 +1,15 @@
 'use strict';
 
 (function () {
-  var websiteSectionsToogle = document.querySelector('.page-footer__website-sections .page-footer__toggle');
-  var contactsToogle = document.querySelector('.page-footer__contacts .page-footer__toggle');
+  var websiteSectionsToggle = document.querySelector('.page-footer__website-sections .page-footer__toggle');
+  var contactsToggle = document.querySelector('.page-footer__contacts .page-footer__toggle');
   var websiteSections = document.querySelector('.page-footer__website-sections');
   var contacts = document.querySelector('.page-footer__contacts');
 
   websiteSections.classList.add('page-footer__website-sections--closed');
   contacts.classList.add('page-footer__contacts--opened');
 
-  websiteSectionsToogle.addEventListener('click', function () {
+  websiteSectionsToggle.addEventListener('click', function () {
     if (websiteSections.classList.contains('page-footer__website-sections--closed')) {
       websiteSections.classList.remove('page-footer__website-sections--closed');
       websiteSections.classList.add('page-footer__website-sections--opened');
@@ -21,7 +21,7 @@
     }
   });
 
-  contactsToogle.addEventListener('click', function () {
+  contactsToggle.addEventListener('click', function () {
     if (contacts.classList.contains('page-footer__contacts--closed')) {
       contacts.classList.remove('page-footer__contacts--closed');
       contacts.classList.add('page-footer__contacts--opened');
@@ -79,6 +79,7 @@
   var closeButton = document.querySelector('.modal-inquiry-form__close-button');
 
   var modalInquiryForm = document.querySelector('.modal-inquiry-form');
+  var body = document.querySelector('body');
 
   var name = modalInquiryForm.querySelector('.form__input--user-name input');
   var tel = modalInquiryForm.querySelector('.form__input--tel input');
@@ -124,6 +125,7 @@
   var closePopup = function () {
     writeInLocalStorage();
     modalInquiryForm.classList.remove('modal-inquiry-form--opened');
+    body.classList.remove('fixed');
     closeButton.removeEventListener('click', onCloseButtonClick);
     document.removeEventListener('keydown', onPopupEscPress);
     document.removeEventListener('click', onAroundPopupClick);
@@ -133,6 +135,7 @@
   openButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     evt.stopPropagation();
+    body.classList.add('fixed');
     modalInquiryForm.classList.add('modal-inquiry-form--opened');
 
     try {
@@ -158,5 +161,19 @@
     document.addEventListener('keydown', onPopupEscPress);
     document.addEventListener('click', onAroundPopupClick);
     submitButton.addEventListener('click', onSubmitButtonClick);
+  });
+})();
+
+'use strict';
+/* global $ */
+/* eslint no-undef: "error"*/
+/* eslint no-invalid-this: "off" */
+(function () {
+  $(document).on('click', '.main-screen__anchor-link', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 700);
   });
 })();

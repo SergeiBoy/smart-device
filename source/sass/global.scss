@@ -2,6 +2,8 @@
 html {
   height: 100%;
   box-sizing: border-box;
+
+  overflow-y: scroll;
 }
 
 *,
@@ -17,6 +19,10 @@ body {
   flex-direction: column;
   height: 100%;
   padding: 0;
+}
+
+.fixed {
+  overflow: hidden;
 }
 
 img {
