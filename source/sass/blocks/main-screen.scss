@@ -113,6 +113,11 @@
 
     transform: rotate(-90deg);
   }
+
+  &:hover,
+  &:focus {
+    color: darken(#ffffff, 20%);
+  }
 }
 
 .main-screen__image-wrapper {

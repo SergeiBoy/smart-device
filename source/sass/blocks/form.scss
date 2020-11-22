@@ -71,6 +71,7 @@
 
   background-color: #33c1ff;
   border: 0;
+  border-radius: 0;
 
   &:hover,
   &:focus {
@@ -99,6 +100,7 @@
 
   background-color: #33c1ff;
   border: 0;
+  border-radius: 0;
   resize: none;
 
   &:hover,
@@ -160,6 +162,7 @@
 .form__checkbox {
   position: relative;
   margin-top: 5px;
+  order: 1;
 
   padding-left: 33px;
 }
@@ -187,6 +190,7 @@
 
   &:hover {
     opacity: 1;
+    color: darken(#ffffff, 20%);
   }
 
   &::before {
@@ -220,6 +224,7 @@
 
 .form__checkbox input:focus + label {
   opacity: 1;
+  color: darken(#ffffff, 20%);
 }
 
 @media (max-width: $tablet-width) {

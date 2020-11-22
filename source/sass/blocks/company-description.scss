@@ -64,6 +64,11 @@
 
   border: solid 1px #00b2ff;
   border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    color: darken(#00b2ff, 10%);
+  }
 }
 
 @media (max-width: $tablet-width) {

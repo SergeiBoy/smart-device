@@ -61,7 +61,8 @@
 }
 
 .page-footer__logo-and-social > p,
-.page-footer__bottom-layer p {
+.page-footer__bottom-layer p,
+.page-footer__bottom-layer a {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 13px;
@@ -70,6 +71,11 @@
   text-transform: uppercase;
   color: #1b2d37;
   opacity: 0.5;
+}
+
+.page-footer__bottom-layer a {
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 
 .page-footer__bottom-layer p {
@@ -132,7 +138,8 @@
   margin-bottom: 0;
 }
 
-.page-footer__upper-layer a {
+.page-footer__upper-layer a,
+.page-footer__bottom-layer a {
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -348,7 +355,8 @@
     align-items: center;
   }
 
-  .page-footer__bottom-layer p {
+  .page-footer__bottom-layer p,
+  .page-footer__bottom-layer a {
     margin-bottom: 8px;
   }
 

@@ -659,6 +659,9 @@ a {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg); }
 
+.main-screen__anchor-link:hover, .main-screen__anchor-link:focus {
+  color: #cccccc; }
+
 .main-screen__image-wrapper {
   margin-top: 258px;
   -ms-flex-negative: 0;
@@ -782,8 +785,7 @@ a {
   padding: 40px 40px 20px 40px;
   border: solid 1px #ebebeb;
   border-left: solid 3px #00b2ff;
-  background-color: #ffffff;
-  cursor: pointer; }
+  background-color: #ffffff; }
   .advantages__item:hover {
     background-color: #00b2ff; }
 
@@ -961,6 +963,8 @@ a {
   color: #00b2ff;
   border: solid 1px #00b2ff;
   border-radius: 5px; }
+  .company-description__details a:hover, .company-description__details a:focus {
+    color: #008ecc; }
 
 @media (max-width: 1023px) {
   .company-description {
@@ -1265,7 +1269,8 @@ a {
   height: 50px;
   padding: 14px 16px;
   background-color: #33c1ff;
-  border: 0; }
+  border: 0;
+  border-radius: 0; }
   .form__input input:hover, .form__input input:focus {
     background-color: #66d1ff; }
   .form__input input::-webkit-input-placeholder {
@@ -1309,6 +1314,7 @@ a {
   padding: 14px 16px;
   background-color: #33c1ff;
   border: 0;
+  border-radius: 0;
   resize: none; }
   .form textarea:hover, .form textarea:focus {
     background-color: #66d1ff; }
@@ -1376,6 +1382,9 @@ a {
 .form__checkbox {
   position: relative;
   margin-top: 5px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   padding-left: 33px; }
 
 .form--popup .form__checkbox {
@@ -1405,7 +1414,8 @@ a {
   opacity: 0.8;
   cursor: pointer; }
   .form__checkbox label:hover {
-    opacity: 1; }
+    opacity: 1;
+    color: #cccccc; }
   .form__checkbox label::before {
     content: "";
     position: absolute;
@@ -1427,7 +1437,8 @@ a {
   background-position: center; }
 
 .form__checkbox input:focus + label {
-  opacity: 1; }
+  opacity: 1;
+  color: #cccccc; }
 
 @media (max-width: 1023px) {
   .form--bottom {
@@ -1565,7 +1576,8 @@ a {
   fill: #9a9a9a; }
 
 .page-footer__logo-and-social > p,
-.page-footer__bottom-layer p {
+.page-footer__bottom-layer p,
+.page-footer__bottom-layer a {
   font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 13px;
@@ -1574,6 +1586,10 @@ a {
   text-transform: uppercase;
   color: #1b2d37;
   opacity: 0.5; }
+
+.page-footer__bottom-layer a {
+  margin-top: 13px;
+  margin-bottom: 13px; }
 
 .page-footer__bottom-layer p:first-child {
   margin-right: 45px; }
@@ -1627,7 +1643,9 @@ a {
   margin-top: 0;
   margin-bottom: 0; }
 
-.page-footer__upper-layer a:hover, .page-footer__upper-layer a:focus {
+.page-footer__upper-layer a:hover, .page-footer__upper-layer a:focus,
+.page-footer__bottom-layer a:hover,
+.page-footer__bottom-layer a:focus {
   opacity: 0.8; }
 
 .page-footer__contacts {
@@ -1786,7 +1804,8 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .page-footer__bottom-layer p {
+  .page-footer__bottom-layer p,
+  .page-footer__bottom-layer a {
     margin-bottom: 8px; }
   .page-footer__website-sections--opened .page-footer__toggle,
   .page-footer__contacts--opened .page-footer__toggle {
